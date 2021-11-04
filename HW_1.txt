@@ -1,0 +1,45 @@
+1) Посмотреть где я -> pwd
+2) Создать папку -> mkdir foldername_1
+3) Зайти в папку -> cd foldername_1
+4) Создать 3 папки -> mkdir foldername_1 foldername_2 foldername_3 
+5) Зайти в любоую папку -> cd foldername_1
+6) Создать 5 файлов (3 txt, 2 json)-> touch 1.txt 2.txt 3.txt 4.json 5.json
+7) Создать 3 папки -> mkdir f_1 f_2 f_3
+8. Вывести список содержимого папки -> ls -la
+9) + Открыть любой txt файл -> vim 1.txt
+10) + написать туда что-нибудь, любой текст. -> press "I" -> type some text
+11) + сохранить и выйти. -> press "Esc" -> :wq
+12) Выйти из папки на уровень выше -> cd -
+
+13) переместить любые 2 файла, которые вы создали, в любую другую папку. -> mv 1.txt 2.txt c/github/foldername_1
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку. -> cp 1.txt 2.txt c/github/foldername_1
+15) Найти файл по имени -> find -name "filename.txt"
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает. tail -F /c/github/test.txt
+17) вывести несколько первых строк из текстового файла -> head -n 3 ./test.txt
+18) вывести несколько последних строк из текстового файла -> tail -n3 ./test.txt
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает. -> less ./test.txt
+20) вывести дату и время -> date
+
+Задание *
+1) Отправить http запрос на сервер.
+http://162.55.220.72:5005/object_info_3?name=Vadim&age=32&salary=1000
+
+-> curl "http://162.55.220.72:5005/object_info_3?name=Vadim&age=32&salary=1000"
+
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+
+-> mkdir scripts
+-> cd scripts
+-> cat > script.sh
+-> #! /bin/bash
+cd /c/github/folder_1
+mkdir script_1 script_2 script_3
+cd ./script_1
+touch s1.txt s2.txt s3.txt s4.json s5.json
+mkdir 111 222 333
+ls -la
+mv s1.txt s2.txt /c/github/folder_1/script_2
+
+-> press Ctrl+D
+-> chmod u+x script.sh
+-> bash script.sh
